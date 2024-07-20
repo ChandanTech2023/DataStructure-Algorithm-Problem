@@ -27,10 +27,8 @@ Approach :
    Time-Complexity :o(n) ,Space Complexity : O(1)
 */
 //Function to reverse arr[] from start to end
-void reverse(int arr[],int n){
-    int start =0;
-    int end =n-1;
-    while (start<=end)
+void reverse(int arr[],int start,int end){
+    while (start<end)
     {
        int temp=arr[start];
        arr[start]=arr[end];
@@ -42,7 +40,7 @@ void reverse(int arr[],int n){
 void printArray(int arr[],int n){
         for (int i = 0; i < n; i++)
         {
-            cout<<arr[i]<<" ";
+            cout<<arr[i];
         }
 }
 /*Method-03: Using Recursion
@@ -67,15 +65,14 @@ int arr[]={1,2,3,4,5};
 int n=5;
 // reverse(array,size);
 cout<<"Before reverse Array is:";
-reverse(arr,n);
 printArray(arr,n);
 cout<<endl;
 // // Function calling
-// reverse(arr,0,n-1);
+reverse(arr,0,n-1);
 
-// cout<<"After Reverse array is:";
-// //Print the Array
-// printArray(arr,n);
+cout<<"After Reverse array is:";
+//Print the Array
+printArray(arr,n);
 
 return 0;
 
